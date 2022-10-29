@@ -66,7 +66,7 @@ func Context(ctx context.Context) Option {
 	}
 }
 
-func Singal(sigs ...os.Signal) Option {
+func Signal(sigs ...os.Signal) Option {
 	return func(o *options) {
 		o.sigs = sigs
 	}
