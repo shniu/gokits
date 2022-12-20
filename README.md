@@ -9,6 +9,7 @@ Golang development tool kits.
 ## Third-party libs
 
 - pkg/errors
+- [zeromicro/go-zero](https://github.com/zeromicro/go-zero)  A cloud-native Go microservices framework with cli tool for productivity.
 
 ## Reference
 
