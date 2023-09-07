@@ -3,7 +3,7 @@ package crypto
 import (
 	"crypto/ecdsa"
 	"encoding/hex"
-	"github.com/shniu/gokits/common"
+	hex2 "github.com/shniu/gokits/common/hex"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -17,7 +17,7 @@ func Test_GenerateKey_toHex_thenToECDSA(t *testing.T) {
 	privHex := hex.EncodeToString(b)
 	t.Log(privHex)
 
-	privHex2 := common.Encode(b)
+	privHex2 := hex2.Encode(b)
 	t.Log(privHex2)
 
 	priv2, err := HexToECDSA(privHex)
@@ -48,7 +48,7 @@ func Test_Address_isOk(t *testing.T) {
 	}
 
 	pubBytes := FromECDSAPub(pub)
-	pubHex := common.Encode(pubBytes)
+	pubHex := hex2.Encode(pubBytes)
 	t.Log(pubHex)
 
 	address := PubkeyToAddress(*pub)

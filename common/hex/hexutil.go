@@ -1,4 +1,7 @@
-package common
+// Copyright shaohan.n. All rights reserved.
+
+// hex package.
+package hex
 
 import (
 	"encoding/hex"
